@@ -9,6 +9,7 @@ export default function App() {
     setValue((preValue) => {
       return [...preValue, item];
     });
+    setItem("");
   }
 
   function handleChange(event) {
@@ -22,7 +23,7 @@ export default function App() {
         <h1>To-Do List</h1>
       </div>
       <div className="form">
-        <input type="text" onChange={handleChange} />
+        <input type="text" value={item} onChange={handleChange} />
         <button onClick={handleClick}>
           <span>Add</span>
         </button>
